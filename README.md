@@ -1,6 +1,10 @@
-# turistikrota osm
+# OSM Nominatim API for Golang
 
-The `osm` package provides functions to interact with the OpenStreetMap API. It includes functionalities for reverse geocoding, retrieving details about specific OSM objects, searching for places, and looking up information based on OSM type and ID.
+The `nominatim` package provides functions to interact with the v1 API of the OpenStreetMap Nominatim web service. It includes functionalities for reverse geocoding, retrieving details about specific OSM objects, searching for places, and looking up information based on OSM type and ID.
+
+This is a fork of [turistikrota/osm](https://github.com/turistikrota/osm) which
+adds some missing fields in the `ReverseResult` struct (the result of the
+reverse geocoding call).
 
 ## Installation
 
