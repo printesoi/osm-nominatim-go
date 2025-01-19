@@ -1,4 +1,4 @@
-package osm
+package nominatim
 
 // Opts holds configuration options for requests.
 type Opts struct {

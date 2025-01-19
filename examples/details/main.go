@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/turistikrota/osm"
+	nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
 	ctx := context.Background()
-	result, err := osm.DetailsWithPlaceID(ctx, 240109189) // PlaceID for the Empire State Building
+	result, err := nominatim.DetailsWithPlaceID(ctx, 240109189) // PlaceID for the Empire State Building
 	if err != nil {
 		fmt.Println("Error:", err)
 		return

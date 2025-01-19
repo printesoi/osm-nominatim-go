@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/turistikrota/osm"
+	nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
 	ctx := context.Background()
-	result, err := osm.Reverse(ctx, 40.748817, -73.985428) // Latitude and Longitude for the Empire State Building
+	result, err := nominatim.Reverse(ctx, 40.748817, -73.985428) // Latitude and Longitude for the Empire State Building
 	if err != nil {
 		fmt.Println("Error:", err)
 		return

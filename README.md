@@ -7,7 +7,7 @@ The `osm` package provides functions to interact with the OpenStreetMap API. It 
 To install the package, use:
 
 ```sh
-go get github.com/turistikrota/osm
+go get github.com/printesoi/osm-nominatim-go
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ go get github.com/turistikrota/osm
 ### Importing the Package
 
 ```go
-import "github.com/turistikrota/osm"
+import "github.com/printesoi/osm-nominatim-go"
 ```
 
 ### Methods
@@ -52,12 +52,12 @@ package main
 import (
     "context"
     "fmt"
-    "github.com/turistikrota/osm"
+    nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
     ctx := context.Background()
-    result, err := osm.Reverse(ctx, 40.748817, -73.985428) // Latitude and Longitude for the Empire State Building
+    result, err := nominatim.Reverse(ctx, 40.748817, -73.985428) // Latitude and Longitude for the Empire State Building
     if err != nil {
         fmt.Println("Error:", err)
         return
@@ -74,12 +74,12 @@ package main
 import (
     "context"
     "fmt"
-    "github.com/turistikrota/osm"
+    nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
     ctx := context.Background()
-    result, err := osm.DetailsWithPlaceID(ctx, 240109189) // PlaceID for the Empire State Building
+    result, err := nominatim.DetailsWithPlaceID(ctx, 240109189) // PlaceID for the Empire State Building
     if err != nil {
         fmt.Println("Error:", err)
         return
@@ -96,12 +96,12 @@ package main
 import (
     "context"
     "fmt"
-    "github.com/turistikrota/osm"
+    nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
     ctx := context.Background()
-    results, err := osm.Search(ctx, "Central Park")
+    results, err := nominatim.Search(ctx, "Central Park")
     if err != nil {
         fmt.Println("Error:", err)
         return
@@ -120,12 +120,12 @@ package main
 import (
     "context"
     "fmt"
-    "github.com/turistikrota/osm"
+    nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
     ctx := context.Background()
-    result, err := osm.Lookup(ctx, "way", 123456789) // Example OSM type and ID
+    result, err := nominatim.Lookup(ctx, "way", 123456789) // Example OSM type and ID
     if err != nil {
         fmt.Println("Error:", err)
         return

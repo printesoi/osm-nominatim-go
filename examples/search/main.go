@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/turistikrota/osm"
+	nominatim "github.com/printesoi/osm-nominatim-go"
 )
 
 func main() {
 	ctx := context.Background()
-	results, err := osm.Search(ctx, "Central Park")
+	results, err := nominatim.Search(ctx, "Central Park")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
