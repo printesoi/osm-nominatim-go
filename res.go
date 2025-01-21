@@ -36,7 +36,9 @@ type ReverseResult struct {
 		Region        string `json:"region"`                   // Region is the region of the place.
 		CityDistrict  string `json:"city_district,omitempty"`  // CityDistrict is the city district of the place.
 		Village       string `json:"village,omitempty"`        // Village is the village of the place.
-		StateDistrict string `json:"state_district,omitempty"` // Village is the village of the place.
+		StateDistrict string `json:"state_district,omitempty"` // Village is the state district of the place.
+		Leisure       string `json:"leisure,omitempty"`
+		Residential   string `json:"residential,omitempty"`
 	} `json:"address"` // Address contains detailed address information.
 	Boundingbox []string `json:"boundingbox"` // Boundingbox is the bounding box of the place.
 }
